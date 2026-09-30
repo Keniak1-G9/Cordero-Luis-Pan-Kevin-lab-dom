@@ -1,0 +1,253 @@
+:root {
+  --verde: #0b6b3a;
+  --verde-oscuro: #084d2a;
+  --verde-suave: #e8f5ee;
+  --rojo: #b42318;
+  --rojo-fondo: #fef3f2;
+  --ambar: #b54708;
+  --ambar-fondo: #fffaeb;
+  --gris: #475467;
+  --borde: #d0d5dd;
+  --fondo: #f4f6f5;
+  --blanco: #ffffff;
+  --sombra: 0 10px 30px rgba(8, 40, 24, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--fondo);
+  color: #1d2939;
+  line-height: 1.45;
+}
+
+.encabezado {
+  background: linear-gradient(135deg, var(--verde-oscuro), var(--verde));
+  color: var(--blanco);
+  padding: 2rem 1.25rem 1.75rem;
+  text-align: center;
+}
+
+.encabezado__marca {
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+.encabezado h1 {
+  margin: 0.35rem 0 0.25rem;
+  font-size: 1.7rem;
+}
+
+.encabezado__sub {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 640px;
+  margin: -1.25rem auto 2.5rem;
+  padding: 0 1rem;
+}
+
+#inscripcion {
+  background: var(--blanco);
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem 1.35rem;
+  box-shadow: var(--sombra);
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label,
+.campo legend {
+  display: block;
+  font-weight: 650;
+  margin-bottom: 0.35rem;
+}
+
+.opcional {
+  font-weight: 400;
+  color: var(--gris);
+  font-size: 0.85rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  font: inherit;
+  background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--verde);
+  outline-offset: 1px;
+  border-color: var(--verde);
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: var(--rojo);
+  background: var(--rojo-fondo);
+}
+
+.campo-grupo {
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem 0.5rem;
+}
+
+.opciones {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.campo-check {
+  margin-top: 0.4rem;
+}
+
+.error {
+  min-height: 1.15em;
+  margin: 0.3rem 0 0;
+  color: var(--rojo);
+  font-size: 0.88rem;
+}
+
+.fuerza {
+  margin-top: 0.45rem;
+}
+
+.fuerza__barra {
+  height: 8px;
+  background: #eaecf0;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.fuerza__barra span {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  transition: width 0.2s ease, background 0.2s ease;
+}
+
+.fuerza--debil span { width: 33%; background: #d92d20; }
+.fuerza--media span { width: 66%; background: #dc6803; }
+.fuerza--fuerte span { width: 100%; background: #079455; }
+
+.fuerza__texto {
+  margin: 0.3rem 0 0;
+  font-size: 0.82rem;
+  color: var(--gris);
+}
+
+.contador {
+  margin: 0.3rem 0 0;
+  text-align: right;
+  font-size: 0.82rem;
+  color: var(--gris);
+}
+
+.contador.alerta {
+  color: var(--ambar);
+  font-weight: 650;
+}
+
+.contador.limite {
+  color: var(--rojo);
+  font-weight: 700;
+}
+
+button[type="submit"] {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.8rem 1rem;
+  border: 0;
+  border-radius: 12px;
+  background: var(--verde);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: var(--verde-oscuro);
+}
+
+#confirmacion:empty {
+  display: none;
+}
+
+.tarjeta {
+  margin-top: 1.25rem;
+  background: var(--blanco);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: var(--sombra);
+  border-left: 6px solid var(--verde);
+}
+
+.tarjeta h2 {
+  margin: 0 0 0.75rem;
+  color: var(--verde-oscuro);
+  font-size: 1.15rem;
+}
+
+.tarjeta dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 0.35rem 0.75rem;
+}
+
+.tarjeta dt {
+  color: var(--gris);
+  font-weight: 650;
+}
+
+.tarjeta dd {
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  color: var(--gris);
+  font-size: 0.85rem;
+  padding: 0 1rem 2rem;
+}
+
+@media (max-width: 560px) {
+  .tarjeta dl {
+    grid-template-columns: 1fr;
+  }
+}

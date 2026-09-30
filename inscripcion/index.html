@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripción a cursos — FISC · UTP</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <p class="encabezado__marca">Universidad Tecnológica de Panamá</p>
+    <h1>Inscripción a un curso</h1>
+    <p class="encabezado__sub">Facultad de Ingeniería de Sistemas Computacionales</p>
+  </header>
+
+  <main>
+    <form id="inscripcion" novalidate>
+      <div class="campo">
+        <label for="nombre">Nombre completo</label>
+        <input
+          id="nombre"
+          name="nombre"
+          type="text"
+          autocomplete="name"
+          aria-describedby="nombre-error"
+        >
+        <p id="nombre-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="cedula">Cédula</label>
+        <input
+          id="cedula"
+          name="cedula"
+          type="text"
+          inputmode="text"
+          placeholder="8-123-4567"
+          autocomplete="off"
+          aria-describedby="cedula-error"
+        >
+        <p id="cedula-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="correo">Correo</label>
+        <input
+          id="correo"
+          name="correo"
+          type="email"
+          autocomplete="email"
+          aria-describedby="correo-error"
+        >
+        <p id="correo-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="celular">Celular</label>
+        <input
+          id="celular"
+          name="celular"
+          type="tel"
+          inputmode="tel"
+          placeholder="6123-4567"
+          autocomplete="tel"
+          aria-describedby="celular-error"
+        >
+        <p id="celular-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="nacimiento">Fecha de nacimiento</label>
+        <input
+          id="nacimiento"
+          name="nacimiento"
+          type="date"
+          aria-describedby="nacimiento-error"
+        >
+        <p id="nacimiento-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="curso">Curso</label>
+        <select id="curso" name="curso" aria-describedby="curso-error">
+          <option value="">Selecciona un curso</option>
+          <option value="Ingeniería Web">Ingeniería Web</option>
+          <option value="Programación I">Programación I</option>
+          <option value="Bases de Datos">Bases de Datos</option>
+          <option value="Redes de Computadoras">Redes de Computadoras</option>
+          <option value="Ingeniería de Software">Ingeniería de Software</option>
+        </select>
+        <p id="curso-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <fieldset class="campo campo-grupo">
+        <legend>Modalidad</legend>
+        <div class="opciones">
+          <label class="opcion">
+            <input type="radio" name="modalidad" value="presencial">
+            Presencial
+          </label>
+          <label class="opcion">
+            <input type="radio" name="modalidad" value="virtual">
+            Virtual
+          </label>
+        </div>
+        <p id="modalidad-error" class="error" aria-live="polite"></p>
+      </fieldset>
+
+      <div class="campo" id="campo-sede" hidden>
+        <label for="sede">Sede</label>
+        <select id="sede" name="sede" aria-describedby="sede-error">
+          <option value="">Selecciona una sede</option>
+          <option value="Ciudad de Panamá">Ciudad de Panamá</option>
+          <option value="David">David</option>
+          <option value="Santiago">Santiago</option>
+        </select>
+        <p id="sede-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="clave">Contraseña</label>
+        <input
+          id="clave"
+          name="clave"
+          type="password"
+          autocomplete="new-password"
+          aria-describedby="clave-error clave-fuerza"
+        >
+        <div id="clave-fuerza" class="fuerza" hidden>
+          <div class="fuerza__barra"><span id="fuerza-relleno"></span></div>
+          <p id="fuerza-texto" class="fuerza__texto"></p>
+        </div>
+        <p id="clave-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="confirmar">Confirmar contraseña</label>
+        <input
+          id="confirmar"
+          name="confirmar"
+          type="password"
+          autocomplete="new-password"
+          aria-describedby="confirmar-error"
+        >
+        <p id="confirmar-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="comentarios">Comentarios <span class="opcional">(opcional)</span></label>
+        <textarea
+          id="comentarios"
+          name="comentarios"
+          rows="4"
+          maxlength="200"
+          aria-describedby="comentarios-error comentarios-contador"
+        ></textarea>
+        <p id="comentarios-contador" class="contador">0 / 200</p>
+        <p id="comentarios-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo campo-check">
+        <label class="opcion">
+          <input
+            id="terminos"
+            name="terminos"
+            type="checkbox"
+            aria-describedby="terminos-error"
+          >
+          Acepto los términos y condiciones del curso
+        </label>
+        <p id="terminos-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <button type="submit">Inscribirme</button>
+    </form>
+
+    <section id="confirmacion" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>Ingeniería Web · 1SF-133 · Dra. Elba Valderrama Bahamóndez</p>
+  </footer>
+
+  <script src="validacion.js" defer></script>
+</body>
+</html>

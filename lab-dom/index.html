@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab DOM</title>
+</head>
+<body>
+  <h1 id="titulo">Mi primera página dinámica</h1>
+  <ul id="lista"></ul>
+
+  <button id="saludar" type="button">Saludar</button>
+
+  <form id="registro" novalidate>
+    <p>
+      <label for="nombre">Nombre</label>
+      <input id="nombre" name="nombre" aria-describedby="nombre-error">
+      <span id="nombre-error" class="error" aria-live="polite"></span>
+    </p>
+    <p>
+      <label for="correo">Correo</label>
+      <input id="correo" name="correo" type="email" aria-describedby="correo-error">
+      <span id="correo-error" class="error" aria-live="polite"></span>
+    </p>
+    <p>
+      <label for="cedula">Cédula</label>
+      <input id="cedula" name="cedula" placeholder="8-123-4567" aria-describedby="cedula-error">
+      <span id="cedula-error" class="error" aria-live="polite"></span>
+    </p>
+    <p>
+      <label for="clave">Contraseña</label>
+      <input id="clave" name="clave" type="password" aria-describedby="clave-error">
+      <span id="clave-error" class="error" aria-live="polite"></span>
+    </p>
+    <p>
+      <label for="clave2">Confirmar</label>
+      <input id="clave2" name="clave2" type="password" aria-describedby="clave2-error">
+      <span id="clave2-error" class="error" aria-live="polite"></span>
+    </p>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- defer: el script corre cuando el HTML ya está cargado -->
+  <script src="app.js" defer></script>
+</body>
+</html>
