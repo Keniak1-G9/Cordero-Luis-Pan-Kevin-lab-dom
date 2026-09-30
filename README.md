@@ -13,7 +13,7 @@ Enlaces:
 
  Capturas de pantalla:
   - Campos faltantes
-  ![formulario con campos vacios](formulario_incompleto?raw=true "Formulario Incompleto")
+  ![formulario con campos vacios](/formulario_incompleto?raw=true "Formulario Incompleto")
 
   - Formulario llenado y mensaje de exito
-  ![formulario enviado con mensaje de exito](formulario_enviado?raw=true "Formulario Enviado")
+  ![formulario enviado con mensaje de exito](/formulario_enviado?raw=true "Formulario Enviado")
